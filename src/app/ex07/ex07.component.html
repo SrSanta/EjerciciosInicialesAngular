@@ -1,0 +1,20 @@
+<h1>Exercice 7</h1>
+<h2>*ngFor</h2>
+<h3 class="mb-5">Structural directive</h3>
+Order: 
+<select class="mb-2" [(ngModel)]="sortOrderNum" (change)="orderList()">
+  <option value="asc">Asc</option>
+  <option value="desc">Desc</option>
+</select>
+<br>
+<b>Numbers:</b>
+<p *ngFor="let n of numbers">{{ n }}</p>
+<div class="border border-success w-75 mx-auto mb-3"></div>
+Order: 
+<select class="mb-2" [(ngModel)]="sortOrder" (change)="sortListFruit()">
+    <option value="asc">Asc</option>
+    <option value="desc">Desc</option>
+  </select>
+<br>
+<b>Fruits:</b>
+<p *ngFor="let f of fruits">{{ f }}</p>
