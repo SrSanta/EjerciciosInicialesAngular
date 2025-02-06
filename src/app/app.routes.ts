@@ -12,7 +12,7 @@ import { Ex09Component } from './ex09/ex09.component';
 import { Ex10Component } from './ex10/ex10.component';
 
 export const routes: Routes = [
-    { path: '', component: AppComponent},
+    { path: '', component: Ex01Component},
     { path: 'ex01', component: Ex01Component },
     { path: 'ex02', component: Ex02Component },
     { path: 'ex03', component: Ex03Component },
@@ -23,4 +23,5 @@ export const routes: Routes = [
     { path: 'ex08', component: Ex08Component },
     { path: 'ex09', component: Ex09Component },
     { path: 'ex10', component: Ex10Component },
+    /* { path: '', redirectTo: 'ex01', pathMatch: 'full' }, */
 ];
