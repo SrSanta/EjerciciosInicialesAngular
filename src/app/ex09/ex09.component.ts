@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import {NgForOf} from "@angular/common";
+import { Employee } from '../Models/employee.model';
+import { employees } from '../employees_list';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
-type Employee = {
-  name: string;
-  position: string;
-  salary: number;
-}
+type emplKey = keyof Employee;
 
 @Component({
   selector: 'app-ex09',
   standalone: true,
   imports: [
-    /* NgForOf */
+    NgForOf,
+    CommonModule,
+    FormsModule
   ],
   templateUrl: './ex09.component.html',
   styleUrl: './ex09.component.css'
@@ -19,12 +21,21 @@ type Employee = {
 
 export class Ex09Component {
   employees: Employee[] = [];
+  sortingCriteria:emplKey = 'name';
 
   constructor() { }
 
   ngOnInit(): void {
-    this.employees = [{name:'John', position:'Developer', salary:1000},
-      {name:'John', position:'Developer', salary:1000},
-    ];
+    this.employees = employees;
+  }
+
+  sortEmployees(sortCriteria: string): void {
+    console.log(sortCriteria);
+
+    let key: emplKey = this.sortingCriteria;
+    console.log(key);
+
+    this.employees.sort((a:Employee, b:Employee) => a[key] > b[key] ? 1 : -1);
+
   }
 }

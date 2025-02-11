@@ -6,11 +6,11 @@
   {{ n }}
 </p>
 Insert number:
-<input [(ngModel)]="num"  (keyup.enter)="insNumber()" type="text">
+<input [(ngModel)]="num"  (keyup.enter)="insNumber()" type="number">
 <br><br>
 <h4>Fruits:</h4>
 <p *ngFor="let f of fruits">
   {{ f }}
 </p>
 Insert fruit:
-<input [(ngModel)]="fruit"  (keyup.enter)="insFruit()" type="text">
+<input [(ngModel)]="fruit"  (keyup.enter)="insFruit()" (input)="fruit = fruit.toUpperCase()" type="text">

@@ -1,14 +1,27 @@
 <p>ex09 works!</p>
-<!-- <h1>Exercice 9</h1>
+<h1>Exercice 9</h1>
 <h2>*ngFor - Classes</h2>
 <b>Employees:</b>
 <table class="table-bordered table-hover">
+  <div class="sb-2">
+    <label for="sortingCriteria" class="form-label">Sort by:</label>
+    <select class="form-select form-select-sm" name="sortingCriteria" [(ngModel)]="sortingCriteria"
+      (change)="sortEmployees(sortingCriteria)" id="sortingCriteria">
+
+      <option value="" selected>Select a sorting criteria</option>
+      <option value="name">Name</option>
+      <option value="position">Position</option>
+      <option value="salary">Salary</option>
+      <option value="department">Department</option>
+    </select>
+  </div>
   <tr>
-    <th>Name</th><th>Position</th><th>Salary</th>
+    <th>Name</th><th>Position</th><th>Salary</th><th>departament</th>
   </tr>
   <tr *ngFor="let e of employees">
     <td>{{ e.name }}</td>
     <td>{{ e.position }}</td>
     <td>{{ e.salary }}</td>
+    <td>{{ e.departament}}</td>
   </tr>
-</table> -->
+</table>
