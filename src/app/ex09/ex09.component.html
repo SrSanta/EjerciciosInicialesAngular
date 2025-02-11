@@ -5,14 +5,13 @@
 <table class="table-bordered table-hover">
   <div class="sb-2">
     <label for="sortingCriteria" class="form-label">Sort by:</label>
-    <select class="form-select form-select-sm" name="sortingCriteria" [(ngModel)]="sortingCriteria"
-      (change)="sortEmployees(sortingCriteria)" id="sortingCriteria">
+    <select class="form-select form-select-sm" name="sortingCriteria" [(ngModel)]="sortingCriteria" (change)="sortEmployees(sortingCriteria)" id="sortingCriteria">
 
       <option value="" selected>Select a sorting criteria</option>
       <option value="name">Name</option>
       <option value="position">Position</option>
       <option value="salary">Salary</option>
-      <option value="department">Department</option>
+      <option value="departament">Department</option>
     </select>
   </div>
   <tr>
