@@ -35,7 +35,6 @@ export class Ex09Component {
     let key: emplKey = this.sortingCriteria;
     console.log(key);
 
-    this.employees.sort((a:Employee, b:Employee) => a[key] > b[key] ? 1 : -1);
-
+    this.employees.sort((a: Employee, b: Employee) => String(a[key]).localeCompare(String(b[key])));
   }
 }
